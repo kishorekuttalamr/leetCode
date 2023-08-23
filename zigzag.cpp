@@ -13,6 +13,8 @@ public:
 
         int totalChars = s.length();
         char zigzagMatrix[numRows][totalChars];
+
+        // Initialize the zigzagMatrix with empty spaces
         for (int row = 0; row < numRows; row++)
         {
             for (int col = 0; col < totalChars; col++)
@@ -24,8 +26,10 @@ public:
         int charIndex = 0;
         int currentRow = 0, currentCol = 0;
 
+        // Fill the zigzagMatrix with characters from the input string
         while (charIndex != totalChars)
         {
+            // Moving down in the zigzag pattern
             for (int i = 0; i < numRows - 1 && charIndex != totalChars; i++)
             {
                 zigzagMatrix[currentRow++][currentCol] = s[charIndex++];
@@ -34,6 +38,8 @@ public:
             {
                 break;
             }
+            
+            // Moving up-right in the zigzag pattern
             zigzagMatrix[currentRow][currentCol] = s[charIndex++];
             for (int i = 0; i < numRows - 2 && charIndex != totalChars; i++)
             {
@@ -44,6 +50,7 @@ public:
         }
 
         string result;
+        // Construct the result string from the zigzagMatrix
         for (int row = 0; row < numRows; row++)
         {
             for (int col = 0; col < totalChars; col++)
