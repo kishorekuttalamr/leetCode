@@ -18,5 +18,6 @@ Here's a comprehensive list of LeetCode challenges encompassed within this repos
 | 1. | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | Easy | String, Math | [13] | [C++](https://github.com/kishorekuttalamr/leetCode/blob/main/romantoint.cpp) |
 | 2. | [Zigzag Conversion](https://leetcode.com/problems/zigzag-conversion/) | Medium | String, Math, Array | [6] | [C++](https://github.com/kishorekuttalamr/leetCode/blob/main/zigzag.cpp) |
 | 3. | [Container With Max Water](https://leetcode.com/problems/container-with-most-water/) | Medium | String, Math, Array | [11] | [Java](containerWithMaxWater.java) |
+| 4. | [Two Sum](https://leetcode.com/problems/two-sum/submissions/1084770409/)| Easy | Array | [1] | [C++](https://github.com/kishorekuttalamr/leetCode/blob/main/twosum.cpp) |
 
 Feel free to explore, learn, and contribute to this repository of LeetCode practice questions. Happy coding! 🚀
