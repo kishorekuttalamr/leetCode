@@ -5,16 +5,16 @@
 #         self.left = left
 #         self.right = right
 class Solution:
-    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        def traverse(node1, node2):
-            if not node1 and not node2:
-                yield True
-            elif not node1 or not node2:
-                yield False
-            elif node1.val != node2.val:
-                yield False
-            else:
-                yield from traverse(node1.left, node2.left)
-                yield from traverse(node1.right, node2.right)
+    def isBalanced(self, root: Optional[TreeNode]) -> bool:
+        def height(root):
+            if root is None:
+                return True, 0
+            left = height(root.left)
+            right = height(root.right)
 
-        return all(traverse(p, q))
+            bala =  left[0] and right[0] and abs(left[1]-right[1]) in [0,1]
+            return bala,max(left[1],right[1])+1
+        return height(root)[0]
+
+
+        
